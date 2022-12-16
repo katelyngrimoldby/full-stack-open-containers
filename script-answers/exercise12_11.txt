@@ -1,0 +1,18 @@
+Script started on 2022-12-16 13:22:07-07:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+[?2004h]0;katelyn@katelyn: ~/full-stack-open-containers[01;32mkatelyn@katelyn[00m:[01;34m~/full-stack-open-containers[00m$ docker exec -it 83 bash
+[?2004l[?2004hroot@83c89b5605f1:/data# [Kroot@83c89b5605f1:/data# redis-cli KEYS *
+[?2004l1) "added_todos"
+[?2004hroot@83c89b5605f1:/data# redis-cli GET "added_todos"
+[?2004l"2"
+[?2004hroot@83c89b5605f1:/data# redis-cli SET "added_todos" "9001"
+[?2004lOK
+[?2004hroot@83c89b5605f1:/data# redis-cli DEL "added_todos"
+[?2004l(integer) 1
+[?2004hroot@83c89b5605f1:/data# redis-cli DEL "added_todos"[7@SET "added_todos" "9001"[7PGET "added_todos"[11PKEYS *
+[?2004l(empty array)
+[?2004hroot@83c89b5605f1:/data# exit
+[?2004lexit
+[?2004h]0;katelyn@katelyn: ~/full-stack-open-containers[01;32mkatelyn@katelyn[00m:[01;34m~/full-stack-open-containers[00m$ exit
+[?2004lexit
+
+Script done on 2022-12-16 13:25:59-07:00 [COMMAND_EXIT_CODE="0"]
