@@ -37,6 +37,8 @@ const TodoView = () => {
   return (
     <>
       <h1>Todos</h1>
+      test
+      {process.env.REACT_APP_BACKEND_URL}
       <Form createTodo={createTodo} />
       <List todos={todos} deleteTodo={deleteTodo} completeTodo={completeTodo} />
     </>
