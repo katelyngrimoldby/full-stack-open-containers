@@ -6,6 +6,8 @@ services:
     build:
       context: ./todo-frontend
       dockerfile: Dockerfile
+    volumes:
+      - ./todo-frontend:/usr/src/app
     ports:
       - 3001:80
     container_name: todo-frontend
@@ -27,6 +29,8 @@ services:
     ports:
       - 6379:6379
     command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - ./todo-backend/redis_data:/data
 
   server:
     image: todo-backend
